@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_light_pressed"
+    tools:context=".PostProduct">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="43dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/añotxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginEnd="156dp"
+                    android:ems="10"
+                    android:hint="Año de construcion"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Zonatxt" />
+
+                <Button
+                    android:id="@+id/map_button"
+                    android:layout_width="123dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="74dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="Ubicacion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lat"
+                    app:layout_constraintTop_toBottomOf="@+id/precioEdit" />
+
+                <TextView
+                    android:id="@+id/lat"
+                    android:layout_width="58dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="19dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toEndOf="@+id/log"
+                    app:layout_constraintTop_toBottomOf="@+id/precioEdit" />
+
+                <TextView
+                    android:id="@+id/log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="19dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/precioEdit" />
+
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginEnd="288dp"
+                    android:fontFamily="monospace"
+                    android:text="Operacion"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/categoriaSpinner" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginEnd="313dp"
+                    android:fontFamily="monospace"
+                    android:text="Precio"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/estadoSpinner" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="229dp"
+                    android:fontFamily="monospace"
+                    android:text="Tipo de inmueble"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="178dp"
+                    android:fontFamily="monospace"
+                    android:text="Titulo de la aplicacion"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:fontFamily="monospace"
+                    android:text="Descripcion"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tituloTxt" />
+
+                <EditText
+                    android:id="@+id/Zonatxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginEnd="156dp"
+                    android:ems="10"
+                    android:hint="Zona"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/direcciontxt1" />
+
+                <EditText
+                    android:id="@+id/direcciontxt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="158dp"
+                    android:ems="10"
+                    android:hint="Direccion"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/map_button" />
+
+
+                <Spinner
+                    android:id="@+id/categoriaSpinner"
+                    android:layout_width="224dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="28dp"
+                    android:entries="@array/categoria"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.256"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <EditText
+                    android:id="@+id/descripcionEdit"
+                    android:layout_width="237dp"
+                    android:layout_height="109dp"
+                    android:layout_marginTop="23dp"
+                    android:ems="10"
+                    android:hint="Descripcion"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.201"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <EditText
+                    android:id="@+id/tituloTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    android:hint="Titulo"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.202"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <EditText
+                    android:id="@+id/num_bañostxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Num. baños"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.202"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/num_hab_txt" />
+
+                <EditText
+                    android:id="@+id/numPisoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Num. de planta"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.212"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/num_bañostxt" />
+
+                <EditText
+                    android:id="@+id/num_hab_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Num. habitaciones:"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.202"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/superficietxt" />
+
+                <EditText
+                    android:id="@+id/superficietxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Superficie"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.202"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+                <EditText
+                    android:id="@+id/precioEdit"
+                    android:layout_width="149dp"
+                    android:layout_height="46dp"
+                    android:ems="10"
+                    android:hint="Bs"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.183"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <Spinner
+                    android:id="@+id/estadoSpinner"
+                    android:layout_width="224dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="76dp"
+                    android:entries="@array/estado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.256"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <Button
+                    android:id="@+id/btnPublicar"
+                    android:layout_width="282dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="128dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="publicar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+
+                <Button
+                    android:id="@+id/btnCamera"
+                    android:layout_width="99dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_rounded_border"
+                    android:text="camera"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionEdit" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="149dp"
+                    android:layout_height="143dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/btnCamera"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionEdit"
+                    app:srcCompat="@drawable/big_camera" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="403dp"
+                    android:layout_height="90dp"
+                    android:background="#31312B"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/textVi"
+                        style="@android:style/Widget.Holo.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="monospace"
+                        android:text="Datos del inmueble"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/img55"
+                        app:layout_constraintTop_toBottomOf="@+id/editText555" />
+
+
+                    <ImageView
+                        android:id="@+id/img55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="68dp"
+                        android:src="@android:drawable/ic_notification_overlay"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <EditText
+                        android:id="@+id/editText555"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="92dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="98dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=" PUBLICA TU ANUNCIO"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="405dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#31312B"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/añotxt">
+
+                    <TextView
+                        android:id="@+id/textviii1"
+                        style="@android:style/Widget.Holo.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="monospace"
+                        android:text="Caracteristicas del Inmueble"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/ggg44"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ggg44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@android:drawable/ic_notification_overlay"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="409dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#31312B"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/numPisoTxt">
+
+
+                    <TextView
+                        style="@android:style/Widget.Holo.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="monospace"
+                        android:text="Resumen de la publicacion"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/aaass"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/aaass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@android:drawable/ic_notification_overlay"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

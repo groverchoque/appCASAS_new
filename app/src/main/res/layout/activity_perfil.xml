@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_light_focused"
+    tools:context=".PerfilActivity">
+
+    <TextView
+        android:id="@+id/correoText"
+        android:layout_width="267dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="59dp"
+        android:text="Corrreo"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreEdit" />
+
+    <EditText
+        android:id="@+id/nombreEdit"
+        android:layout_width="267dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
+
+    <TextView
+        android:id="@+id/tipoText"
+        android:layout_width="267dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Tipo usuario"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoText" />
+
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="157dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+        app:srcCompat="@drawable/usuarios" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="267dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="61dp"
+        android:background="@drawable/button_rounded"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipoText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="420dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="15dp"
+        android:background="#31312B"
+        app:layout_constraintBottom_toTopOf="@+id/avatarImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="143dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="139dp"
+            android:layout_marginBottom="17dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Perfil de usuario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

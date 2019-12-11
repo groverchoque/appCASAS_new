@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/plomo">
+
+            <TextView
+                android:id="@+id/textZonaCV"
+                android:layout_width="89dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="17dp"
+                android:text="TextView"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textPrecioCV" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="84dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="54dp"
+                android:text="Precio:"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageFotoCV"
+                app:layout_constraintTop_toBottomOf="@+id/textDescripcionCV" />
+
+            <ImageView
+                android:id="@+id/imageFotoCV"
+                android:layout_width="156dp"
+                android:layout_height="233dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+            <TextView
+                android:id="@+id/textDescripcionCV"
+                android:layout_width="149dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="27dp"
+                android:text="TextView"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintStart_toEndOf="@+id/imageFotoCV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPrecioCV"
+                android:layout_width="90dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="54dp"
+                android:text="TextView"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textDescripcionCV" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="65dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="Zona:"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageFotoCV"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
