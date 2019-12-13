@@ -129,6 +129,18 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textPhoneV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.242"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textEmailV" />
 
                 <TextView
                     android:id="@+id/textEmailV"
@@ -138,7 +150,7 @@
                     android:text="Correo : "
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.229"
+                    app:layout_constraintHorizontal_bias="0.242"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textNombreV" />
 
@@ -224,7 +236,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textZonaCV" />
 
                 <Button
-                    android:id="@+id/btnCita"
+                    android:id="@+id/btnCall"
                     android:layout_width="268dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="156dp"

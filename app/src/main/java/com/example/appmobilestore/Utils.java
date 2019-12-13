@@ -1,7 +1,7 @@
 package com.example.appmobilestore;
 
 public class Utils {
-    public static String HOST = "http://192.168.100.204:8000";
+    public static String HOST = "http://192.168.100.4:8000";
     public static String REGISTER_SERVICE = HOST + "/userRouter/user";
     public static String LOGIN_SERVICE = HOST + "/userRouter/login";
     //publicacion

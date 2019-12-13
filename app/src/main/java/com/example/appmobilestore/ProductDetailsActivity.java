@@ -1,11 +1,18 @@
 package com.example.appmobilestore;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,18 +26,23 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
 import cz.msebera.android.httpclient.Header;
 
 public class ProductDetailsActivity extends AppCompatActivity implements View.OnClickListener{
-    TextView textDescripcion,textCategoria,textPrecio,textNombreV,textEmailV,textZona,
+    TextView textDescripcion,textCategoria,textPrecio,textNombreV,textEmailV,textZona,textPhoneV,
     txtoperacion,txtdireccion,txtsuperficie,
-    txt_año_construc,txtnum_cuartos,txt_num_baños,txt_num_plantas;
+    txt_año_construc,txtnum_cuartos,txt_num_baños,txt_num_plantas;///////////////////////////////////
     ImageView imageV,imageFoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
+        requestPermison();/////
 
         loadComponents();
         Intent intentProduct = getIntent();
@@ -42,6 +54,65 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         }
 
     }
+    public Boolean checkPermission(String permission) {
+        int result = this.checkCallingOrSelfPermission(permission);
+        return result == PackageManager.PERMISSION_GRANTED;
+    }
+
+
+    private void requestPermison(){
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+            requestPermissions(new String[]{Manifest.permission.CALL_PHONE},CODE_PERMISSION);
+        }else{
+            if(checkPermission(Manifest.permission.CALL_PHONE)){
+                Toast.makeText(this,"los permisos fueron otorgados",Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    private final int CODE_PERMISSION = 1000;
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults){
+        if (requestCode == CODE_PERMISSION){
+            if (grantResults.length > 0){
+                if (grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this,"permiso de llamadas otorgado",
+                            Toast.LENGTH_SHORT).show();
+                    initCall();
+                }else{
+                    //funcionalidad desactivada
+                }
+            }
+        }
+    }
+
+    private void initCall(){
+        Button btn =findViewById(R.id.btnCall);
+        btn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnCall:{
+                callPhone();
+                break;
+            }
+        }
+    }
+
+    public void callPhone(){
+        if (checkPermission(Manifest.permission.CALL_PHONE)) {
+            TextView phone = findViewById(R.id.textPhoneV);
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+ phone.getText()));
+            startActivity(intent);
+        }
+    }
+
+
+
 
     private void loadComponents() {
 
@@ -63,6 +134,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         //vendedor
         textNombreV = findViewById(R.id.textNombreV);
         textEmailV = findViewById(R.id.textEmailV);
+        textPhoneV = findViewById(R.id.textPhoneV);//////////////////////////----->////////////
 
         imageV = findViewById(R.id.imageV);
 
@@ -129,6 +201,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
 
         textNombreV.setText(textNombreV.getText() + vendedor.getString("name"));
         textEmailV.setText(textEmailV.getText() + vendedor.getString("email"));
+        textPhoneV.setText(textPhoneV.getText() + vendedor.getString("phone"));///////////////////////////////
 
 
         if (vendedor.getString("avatar" ) != null) {
@@ -136,13 +209,4 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         }
     }
 
-
-
-
-    @Override
-    public void onClick(View v) {
-        Intent cita =new Intent(ProductDetailsActivity.this, CitasActivity.class);
-        startActivity(cita);
-
-    }
 }
