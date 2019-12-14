@@ -8,7 +8,7 @@
     tools:context=".TiendaActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerProducts"
+        android:id="@+id/recyclerProducts2"
         android:layout_width="0dp"
         android:layout_height="565dp"
         android:layout_marginTop="32dp"

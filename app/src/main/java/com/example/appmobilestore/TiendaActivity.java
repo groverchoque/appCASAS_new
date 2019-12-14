@@ -21,7 +21,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -57,7 +56,7 @@ public class TiendaActivity extends AppCompatActivity {
             }
         });
 
-        recyclerProduct = findViewById(R.id.recyclerProducts);
+        recyclerProduct = findViewById(R.id.recyclerProducts2);
 
         recyclerProduct.setLayoutManager(
                 new LinearLayoutManager(TiendaActivity.this,RecyclerView.VERTICAL,false));

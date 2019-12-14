@@ -25,6 +25,10 @@ public class BuyerHomeActivity extends AppCompatActivity implements View.OnClick
         setSupportActionBar(toolbar);
 
         loadComponents();
+
+        //poner icono en action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
     }
 
     private void loadComponents() {
@@ -78,7 +82,7 @@ public class BuyerHomeActivity extends AppCompatActivity implements View.OnClick
         Intent intent;
         switch (v.getId()){
             case R.id.btnPerfil: intent = new Intent(this, PerfilActivity.class);break ;
-            case R.id.btnCitas: intent = new Intent(this, CitasActivity.class);break ;
+            case R.id.btnCitas: intent = new Intent(this, Mapasss.class);break ;
             case R.id.btnTienda: intent = new Intent(this, TiendaActivity.class);break ;
             case R.id.btnCompras: intent = new Intent(this, ComprasActivity.class);break ;
             default: intent = new Intent(this, BuyerHomeActivity.class);break ;

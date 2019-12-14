@@ -2,17 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appmobilestore">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -22,20 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ProductDetailsActivity"></activity>
-        <activity android:name=".LoginGoogle" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".CreateMeetingActivity" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".TiendaActivity" />
-        <activity android:name=".CitasActivity" />
-        <activity android:name=".ComprasActivity" />
-        <activity
-            android:name=".ExampleActivity"
-            android:label="@string/title_activity_example"
-            android:theme="@style/NoActionBar" />
-        <activity android:name=".PostProduct"></activity>
-        <activity android:name=".PerfilActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,10 +43,30 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".Mapasss"
+            android:label="@string/title_activity_mapasss">
+
+
+
+        </activity>
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".LoginGoogle" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".TiendaActivity" />
+        <activity android:name=".ComprasActivity" />
+        <activity
+            android:name=".ExampleActivity"
+            android:label="@string/title_activity_example"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".PostProduct" />
+        <activity android:name=".PerfilActivity" />
+        <activity
             android:name=".RegisterMapActivity"
             android:label="@string/title_activity_register_map" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".BuyerHomeActivity" />
+        <activity android:name=".BuyerHomeActivity">
+
+        </activity>
         <activity android:name=".SellerHomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -60,6 +74,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <provider
