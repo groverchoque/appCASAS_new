@@ -2,14 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appmobilestore">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -29,7 +27,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".MostrarActivity"></activity>
+        <activity android:name=".adminActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -44,11 +43,7 @@
 
         <activity
             android:name=".Mapasss"
-            android:label="@string/title_activity_mapasss">
-
-
-
-        </activity>
+            android:label="@string/title_activity_mapasss" />
         <activity android:name=".ProductDetailsActivity" />
         <activity android:name=".LoginGoogle" />
         <activity android:name=".LoginActivity" />
@@ -64,9 +59,7 @@
             android:name=".RegisterMapActivity"
             android:label="@string/title_activity_register_map" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".BuyerHomeActivity">
-
-        </activity>
+        <activity android:name=".BuyerHomeActivity" />
         <activity android:name=".SellerHomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -74,7 +67,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <provider

@@ -18,8 +18,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -95,16 +93,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         Data.TOKEN = response.getString("token");
                         Data.ID_USER = response.getString("idUser");
 
-                        if (response.getString("tipo").equals("comprador")){
+                        if (response.getString("tipo").equals("admin")){
                             Toast.makeText(LoginActivity.this, response.getString("tipo") + 1 , Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, BuyerHomeActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, adminActivity.class);
                             startActivity(intent);
                         }else {
-                            Toast.makeText(LoginActivity.this, response.getString("tipo") + 2 , Toast.LENGTH_SHORT).show();
+                            if (response.getString("tipo").equals("comprador")){
+                                Toast.makeText(LoginActivity.this, response.getString("tipo") + 1 , Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginActivity.this, BuyerHomeActivity.class);
+                                startActivity(intent);
+                            }else {
+                                Toast.makeText(LoginActivity.this, response.getString("tipo") + 2 , Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(LoginActivity.this, SellerHomeActivity.class);
-                            startActivity(intent);
+                                Intent intent = new Intent(LoginActivity.this, SellerHomeActivity.class);
+                                startActivity(intent);
+                            }
                         }
+
                     }
 
                 } catch (JSONException e) {
