@@ -45,8 +45,10 @@ public class adapter extends RecyclerView.Adapter<adapter.vistas> {
     @Override
     public void onBindViewHolder(@NonNull vistas h, final int position) {
         String name=list.get(position).getName();
+        String tipo=list.get(position).getTipo();
         final String id=list.get(position).getId();
         h.txt.setText(name);
+        h.tx.setText(tipo);
         h.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,10 +81,11 @@ public class adapter extends RecyclerView.Adapter<adapter.vistas> {
     }
 
     class vistas extends RecyclerView.ViewHolder{
-        TextView txt;
+        TextView txt,tx;
         Button btn;
         public vistas(View view){
             super(view);
+            tx= view.findViewById(R.id.tipo);
             txt= view.findViewById(R.id.user);
             btn= view.findViewById(R.id.btnEliminar);
         }

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0F0F0F"
     tools:context=".adminActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
         android:layout_width="420dp"
@@ -65,12 +67,12 @@
         app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
 
     <Button
-        android:id="@+id/btnSalir"
+        android:id="@+id/btnInsertar"
         android:layout_width="247dp"
         android:layout_height="65dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/button_rounded"
-        android:text="SALIR"
+        android:text="INSERTAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMostrar" />

@@ -44,8 +44,9 @@ public class MostrarActivity extends AppCompatActivity {
                     try{
                         JSONObject ob=response.getJSONObject(i);
                         String nom=ob.getString("name");
+                        String tipo=ob.getString("tipo");
                         String id=ob.getString("_id");
-                        item it=new item(nom,id);
+                        item it=new item(nom,id,tipo);
 
                         adp.add(it);
                     }catch (JSONException e){

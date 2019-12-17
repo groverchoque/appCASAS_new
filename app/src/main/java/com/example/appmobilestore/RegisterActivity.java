@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements  View.OnClick
         tipoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 tipo = parent.getItemAtPosition(position).toString();
-                Toast.makeText(RegisterActivity.this, tipo, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(RegisterActivity.this, tipo, Toast.LENGTH_SHORT).show();
             }
             public void onNothingSelected(AdapterView<?> parent) {
 

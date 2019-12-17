@@ -5,12 +5,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.appmobilestore.R;
 import com.example.appmobilestore.Utilities.Data;
 
 public class adminActivity extends AppCompatActivity implements View.OnClickListener{
@@ -29,7 +26,7 @@ public class adminActivity extends AppCompatActivity implements View.OnClickList
     private void loadComponents() {
         btnPerfil = findViewById(R.id.btnPerfil);
         btnMostrar = findViewById(R.id.btnMostrar);
-        btnSalir = findViewById(R.id.btnSalir);
+        btnSalir = findViewById(R.id.btnInsertar);
         btnPerfil.setOnClickListener(this);
         btnMostrar.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
@@ -50,7 +47,7 @@ public class adminActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
             case R.id.btnPerfil: intent = new Intent(this, PerfilActivity.class);break ;
             case R.id.btnMostrar: intent = new Intent(this, MostrarActivity.class);break ;
-            case R.id.btnSalir: intent = new Intent(this, LoginActivity.class);break ;
+            case R.id.btnInsertar: intent = new Intent(this, RegisterActivity.class);break ;
             default: intent = new Intent(this, LoginActivity.class);finish();break ;
         }
 

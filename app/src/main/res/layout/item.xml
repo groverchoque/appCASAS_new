@@ -10,6 +10,12 @@
         android:text="TextView"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/tipo"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="TextView" />
+
     <Button
         android:id="@+id/btnEliminar"
         android:layout_width="101dp"
@@ -17,4 +23,9 @@
         android:background="@drawable/button_rounded"
         android:text="ELIMINAR"
         android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
 </LinearLayout>
