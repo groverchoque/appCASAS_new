@@ -3,7 +3,7 @@ package com.example.appmobilestore.Utilities;
 public class Data {
 
     
-    public static String HOST = "http://192.168.100.4:8000";
+    public static String HOST = "http://192.168.43.218:8000";
     public static String URL = HOST + "/api/";
     public static String URL_USERS = URL + "users/";
 

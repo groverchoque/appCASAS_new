@@ -34,7 +34,6 @@ public class adminActivity extends AppCompatActivity implements View.OnClickList
         btnMostrar.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
 
-
     }
 
 

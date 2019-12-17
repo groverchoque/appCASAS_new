@@ -15,6 +15,7 @@ import com.example.appmobilestore.Items.ItemProduct;
 import com.example.appmobilestore.Utilities.Data;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +30,8 @@ public class TiendaActivity extends AppCompatActivity {
     Spinner spinnerCategoria;
     ArrayList<ItemProduct> listData;
     String categoria;
+    static String spi="";
+    ProductAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,7 @@ public class TiendaActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 categoria = parent.getItemAtPosition(position).toString();
+
             }
 
             @Override
@@ -65,7 +69,9 @@ public class TiendaActivity extends AppCompatActivity {
 
     private void getData() {
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(Data.URL_PRODUCT,new JsonHttpResponseHandler(){
+        RequestParams r=new RequestParams();
+        r.put("spi",spi);
+        client.get(Data.URL_PRODUCT,r,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -105,7 +111,7 @@ public class TiendaActivity extends AppCompatActivity {
 
 
     private void loadData() {
-        ProductAdapter adapter = new ProductAdapter(this, listData);
+        adapter = new ProductAdapter(this, listData);
         recyclerProduct.setAdapter(adapter);
 
     }

@@ -39,6 +39,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         return new ViewHolder(view);
     }
 
+    /*void borrar(){
+        int tam=listData.size();
+        listData.clear();
+        notifyItemRangeRemoved(0,tam);
+    }*/
+
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, final int position) {
         holder.setData(listData.get(position),position);

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.appmobilestore.Utilities.Data;
 import com.loopj.android.http.AsyncHttpClient;
@@ -42,13 +43,16 @@ public class MostrarActivity extends AppCompatActivity {
                 for (int i=0;i<response.length();i++){
                     try{
                         JSONObject ob=response.getJSONObject(i);
-                        String nom=ob.getString("nombre");
-                        item it=new item(nom );
+                        String nom=ob.getString("name");
+                        String id=ob.getString("_id");
+                        item it=new item(nom,id);
+
                         adp.add(it);
                     }catch (JSONException e){
                         e.printStackTrace();
                     }
                 }
+                //Toast.makeText(getApplicationContext(),response+"",Toast.LENGTH_LONG).show();
             }
         });
 
