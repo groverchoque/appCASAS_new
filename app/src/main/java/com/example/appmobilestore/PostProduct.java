@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appmobilestore.Utilities.Data;
@@ -43,7 +44,11 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
     EditText descripcionEdit, precioEdit, zonatxt,direcciontxt,superficietxt,num_cuartostxt,num_bañostxt,num_plantastxt,titulotxt,año_constructxt,getTitulotxt;
     Spinner estadoSpinner, categoriaSpinner;
     ImageView imageView;
-    Button btnCamera, btnPublicar;
+    TextView latText, logText;
+    Button btnCamera, btnPublicar, mapButton;
+
+    int RESULT_MAP = 100;
+    Double lat,log;
 
     String estado,categoria;
 
@@ -74,6 +79,16 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
         estadoSpinner = findViewById(R.id.estadoSpinner);
         categoriaSpinner = findViewById(R.id.categoriaSpinner);
 
+
+        mapButton = findViewById(R.id.map_button);
+        mapButton.setOnClickListener(this);
+
+        imageView = findViewById(R.id.imageView);
+        btnCamera = findViewById(R.id.btnCamera);
+        btnPublicar = findViewById(R.id.btnPublicar);
+        btnCamera.setOnClickListener(this);
+        btnPublicar.setOnClickListener(this);
+
         estadoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -95,13 +110,7 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-        imageView = findViewById(R.id.imageView);
 
-        btnCamera = findViewById(R.id.btnCamera);
-        btnPublicar = findViewById(R.id.btnPublicar);
-        btnCamera.setOnClickListener(this);
-
-        btnPublicar.setOnClickListener(this);
 
     }
 
@@ -190,6 +199,11 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
         params.put("tipo", categoria);  //tipo,
         params.put("zona", zonatxt.getText());
         params.put("vendedor",Data.ID_USER);
+        params.put("lat", lat);
+        params.put("lon", log);
+
+
+
 
 
 
@@ -238,14 +252,38 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnPublicar){
+        if (v.getId() == R.id.btnPublicar) {
             sendData();
         }
-        if (v.getId() == R.id.btnCamera){
-            Snackbar.make(v,"Message",Snackbar.LENGTH_LONG).show();
+        if (v.getId() == R.id.btnCamera) {
+            Snackbar.make(v, "Message", Snackbar.LENGTH_LONG).show();
             cargarImagen();
+
+        } if (v.getId() == R.id.map_button) {
+            registerMap();
+
         }
     }
+     ///camara
+    private void registerMap() {
+        Intent intent = new Intent(this, RegisterMapActivity.class);
+        startActivityForResult(intent, RESULT_MAP);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //DESDE AQUI VA LA PARTE DE LA FOTO
     final int COD_GALERIA=10;
     final int COD_CAMERA=20;
@@ -308,11 +346,31 @@ public class PostProduct extends AppCompatActivity implements View.OnClickListen
                     break;
                 case COD_CAMERA:
                     loadImageCamera();
-
-
                     break;
             }
+        }      if (resultCode == RESULT_OK) {
+            // The user picked a contact.
+            // The Intent's data Uri identifies which contact was selected.
+
+            // Do something with the contact here (bigger example bel;ow)
+            lat = data.getDoubleExtra("lat",0.0);
+            log = data.getDoubleExtra("log",0.0);
+            latText = findViewById(R.id.lat);
+            logText = findViewById(R.id.log);
+
+            latText.setText(lat.toString());
+            logText.setText(log.toString());
         }
+
+
+
+
+
+
+
+
+
+
     }
 
     private void loadImageCamera() {

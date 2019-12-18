@@ -14,8 +14,8 @@
         android:layout_height="match_parent">
 
         <ScrollView
-            android:layout_width="403dp"
-            android:layout_height="593dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:background="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="4dp"
@@ -23,7 +23,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent">
 
@@ -123,7 +123,7 @@
                         android:layout_marginBottom="25dp"
                         android:text="DETALLES DEL INMUEBLE"
                         android:textColor="@android:color/background_light"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:text="Tel:"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -180,11 +180,12 @@
                     android:id="@+id/textPrecioCV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
                     android:layout_marginTop="8dp"
                     android:text="Precio : "
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.132"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textCategoria" />
 
@@ -207,12 +208,12 @@
                     app:layout_constraintHorizontal_bias="0.479"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
-                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+                    app:srcCompat="@drawable/user" />
 
                 <TextView
                     android:id="@+id/textDescripcionCV"
-                    android:layout_width="318dp"
-                    android:layout_height="99dp"
+                    android:layout_width="313dp"
+                    android:layout_height="148dp"
                     android:layout_marginTop="20dp"
                     android:text="Descripcion : "
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -225,11 +226,12 @@
                     android:id="@+id/textZonaCV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="16dp"
                     android:text="Zona:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.125"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textDescripcionCV" />
 
@@ -237,11 +239,12 @@
                     android:id="@+id/textCategoria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
                     android:layout_marginTop="8dp"
                     android:text="Tipo:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.122"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textZonaCV" />
 
@@ -249,12 +252,11 @@
                     android:id="@+id/btnCall"
                     android:layout_width="273dp"
                     android:layout_height="53dp"
-                    android:layout_marginTop="56dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/button_rounded"
                     android:onClick="onClick"
                     android:text="contactar"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.504"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textPhoneV" />
 

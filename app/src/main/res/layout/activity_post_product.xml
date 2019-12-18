@@ -281,11 +281,11 @@
                     android:id="@+id/btnPublicar"
                     android:layout_width="282dp"
                     android:layout_height="39dp"
-                    android:layout_marginTop="128dp"
+                    android:layout_marginTop="400dp"
                     android:background="@drawable/button_rounded"
                     android:text="publicar"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintHorizontal_bias="0.426"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
 
@@ -302,7 +302,7 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="149dp"
+                    android:layout_width="171dp"
                     android:layout_height="143dp"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="12dp"
