@@ -281,13 +281,13 @@
                     android:id="@+id/btnPublicar"
                     android:layout_width="282dp"
                     android:layout_height="39dp"
-                    android:layout_marginTop="400dp"
+                    android:layout_marginTop="32dp"
                     android:background="@drawable/button_rounded"
                     android:text="publicar"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.426"
+                    app:layout_constraintHorizontal_bias="0.519"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 
                 <Button
                     android:id="@+id/btnCamera"
@@ -435,6 +435,29 @@
                         android:src="@android:drawable/ic_notification_overlay"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="405dp"
+                    android:layout_height="381dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+
+                    <GridView
+                        android:id="@+id/gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_weight="1"
+                        android:numColumns="3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></GridView>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
